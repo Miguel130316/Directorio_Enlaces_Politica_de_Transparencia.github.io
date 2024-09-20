@@ -1,0 +1,305 @@
+/* Asegúrate de que estos estilos estén en tu archivo styles.css */
+
+.table-container {
+    overflow-x: auto;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#contact-table th,
+#contact-table td {
+    padding: 15px; /* Aumentar el padding en celdas */
+    border: 1px solid #ddd;
+}
+
+#contact-table th {
+    background-color: #103d63;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    font-size: 16px; /* Aumentar el tamaño de fuente en el encabezado */
+    text-align: center; /* Centrar el texto en los encabezados */
+}
+
+#contact-table th img {
+    width: 20px; /* Aumentar el tamaño de los iconos de filtro */
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+#contact-table td {
+    text-align: center; /* Centrar el texto en las celdas */
+}
+
+#contact-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#contact-table tr:hover {
+    background-color: #e9ecef;
+}
+
+#contact-table th.asc::after {
+    content: " ▲";
+}
+
+#contact-table th.desc::after {
+    content: " ▼";
+}
+
+/* Estilos adicionales para las celdas específicas, si es necesario */
+#contact-table th:nth-child(2),
+#contact-table th:nth-child(3),
+#contact-table th:nth-child(4),
+#contact-table th:nth-child(5),
+#contact-table th:nth-child(6),
+#contact-table th:nth-child(7),
+#contact-table th:nth-child(8),
+#contact-table th:nth-child(9),
+#contact-table th:nth-child(10),
+#contact-table th:nth-child(11),
+#contact-table th:nth-child(12),
+#contact-table th:nth-child(13),
+#contact-table th:nth-child(14),
+#contact-table th:nth-child(15),
+#contact-table th:nth-child(16),
+#contact-table th:nth-child(17)
+ {
+    min-width: 380px; /* Ajusta este valor según sea necesario */
+}
+
+#contact-table td:nth-child(2),
+#contact-table td:nth-child(3),
+#contact-table td:nth-child(4),
+#contact-table td:nth-child(5),
+#contact-table td:nth-child(6),
+#contact-table td:nth-child(7),
+#contact-table td:nth-child(8),
+#contact-table td:nth-child(9),
+#contact-table td:nth-child(10),
+#contact-table td:nth-child(11),
+#contact-table td:nth-child(12),
+#contact-table td:nth-child(13),
+#contact-table td:nth-child(14),
+#contact-table td:nth-child(15),
+#contact-table td:nth-child(16),
+#contact-table th:nth-child(17) {
+    min-width: 380px; /* Ajusta este valor según sea necesario */
+}
+
+/* Resto de tu código CSS existente */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #103d63;
+  color: white;
+  padding: 15px; /* Aumentar el padding para mayor espacio */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  width: 290px;
+  margin-right: 15px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Estilos para el Modal */
+.modal {
+  display: none; /* Oculta el modal por defecto */
+  position: fixed; /* Fija el modal en la pantalla */
+  z-index: 1000; /* Asegúrate de que el modal esté encima de todos los demás elementos */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  animation: fadeIn 0.5s;
+  text-align: center; /* Alinea el contenido del contenedor al centro */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+  text-align: center; /* Alinea el contenido del contenedor al centro */
+  animation: slideIn 0.5s;
+  z-index: 1001; /* Asegúrate de que el contenido del modal esté encima del fondo */
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-button:hover {
+  color: #007bff;
+}
+
+.modal-image {
+  width: 30%;
+  height: auto;
+  margin: 15px auto; /* Centra el elemento horizontalmente */
+  display: block; /* Asegura que el margen automático funcione correctamente */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Agrega estos estilos en tu archivo styles.css */
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+#search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 300px;
+  
+}
+
+#search-button {
+  background-color: #fff;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#search-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.button-container {
+  text-align: right;
+  padding-right: 20px;
+  margin-bottom: 10px;
+}
+
+#download-xls {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añadir sombra */
+  transition: background-color 0.3s, transform 0.3s; /* Añadir transición para color de fondo y transformación */
+}
+
+#download-xls img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+#download-xls:hover {
+  background-color: #218838; /* Cambiar el color de fondo en el hover */
+  transform: scale(1.05); /* Efecto de aumento en el hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumentar la sombra en el hover */
+}
+
+
+
+/* Agrega estos estilos en tu archivo styles.css */
+
+.pagination-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pagination-buttons {
+  display: inline-block;
+}
+
+.pagination-buttons button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.pagination-buttons button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+footer {
+  background-color: #103d63;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

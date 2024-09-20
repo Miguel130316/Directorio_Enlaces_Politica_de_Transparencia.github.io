@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directorio de Contactos</title>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="Logo" id="logo">
+        <nav>
+            <ul>
+                <li><a href="#" id="inicio">Inicio</a></li>
+                <li><a href="#contacto" id="contacto-link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="contacto-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Datos de Contacto</h2>
+            <img src="img/persona.png" alt="Contacto" class="modal-image">
+            <p>
+                Nombre: Ing. Miguel Angel Villegas Arellanos<br>
+                Correo: ing.miguelangelvillegas13@outlook.com<br>
+                Teléfono: 56 - 32 - 70 - 24 - 63
+            </p>
+        </div>
+    </div>
+
+    <main>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar por ID, Nombre de la Institución, Siglas de la Institución">
+            <button id="search-button"><img src="img/buscador.png" alt="Buscar"></button>
+        </div>
+        <div class="button-container">
+            <button id="download-xls"><img src="img/sobresalir.png" alt="XLS"> Descargar Directorio</button>
+        </div>
+        <div class="table-container">
+            <table id="contact-table">
+                <thead>
+                    <tr>
+                        <th>ID <img src="img/ID.png" alt="Filtrar"></th>
+                        <th>Nombre de la Institución <img src="img/Institución.png" alt="Filtrar"></th>
+                        <th>Siglas de la Institución <img src="img/Siglas.png" alt="Filtrar"></th>
+                        <th>Titular de la Institución <img src="img/Titularde_la_ins.png" alt="Filtrar"></th>
+                        <th>Nombre del Enlace Institucional <img src="img/Titularde_la_ins.png" alt="Filtrar"></th>
+                        <th>Puesto del Enlace Institucional <img src="img/Titularde_la_ins.png" alt="Filtrar"></th>
+                        <th>Correo Electrónico del Enlace Institucional <img src="img/correo.png" alt="Filtrar"></th>
+                        <th>Teléfono del Enlace Institucional <img src="img/telefono.png" alt="Filtrar"></th>
+                        <th>Nombre del Enlace Ejecutivo <img src="img/Titularde_la_ins.png" alt="Filtrar"></th>
+                        <th>Puesto del Enlace Ejecutivo <img src="img/Titularde_la_ins.png" alt="Filtrar"></th>
+                        <th>Correo Electrónico del Enlace Ejecutivo <img src="img/correo.png" alt="Filtrar"></th>
+                        <th>Teléfono del Enlace Ejecutivo <img src="img/telefono.png" alt="Filtrar"></th>
+                        <th>Nombre del Administrador de Datos Abiertos <img src="img/Titularde_la_ins.png" alt="Filtrar"></th>
+                        <th>Puesto del Administrador de Datos Abiertos <img src="img/Titularde_la_ins.png" alt="Filtrar"></th>
+                        <th>Correo Electrónico del Administrador de Datos Abiertos <img src="img/correo.png" alt="Filtrar"></th>
+                        <th>Teléfono del Administrador de Datos Abiertos <img src="img/telefono.png" alt="Filtrar"></th>
+                        <th>Documento de Designación <img src="img/pdf.png" alt="Filtrar"></th>
+                    </tr>
+                </thead>
+                <tbody id="contact-tbody">
+                    <!-- Registros de prueba serán insertados aquí -->
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination-container">
+            <p><span id="pagination-info">Mostrando 1-10 de X resultados</span></p>
+            <div class="pagination-buttons">
+                <button id="prev-page" disabled>Anterior</button>
+                <button id="next-page">Siguiente</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Derechos reservados &copy; 2024 - Creado por [Ing. Miguel Angel Villegas]</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
